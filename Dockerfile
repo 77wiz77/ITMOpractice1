@@ -1,5 +1,5 @@
 # pull the base image
-FROM node:18.10-alpine3.15
+FROM node:lts-alpine
 
 # set the working direction
 WORKDIR /app
@@ -10,7 +10,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install app dependencies
 COPY package.json ./
 
-COPY yarn.lock  ./
+COPY yarn.lock ./
 
 RUN yarn install
 
