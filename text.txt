@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-name: Docker Image CI
-=======
 name: Docker Image CIsdsdsds
->>>>>>> Stashed changes
 
 on:
   push:
