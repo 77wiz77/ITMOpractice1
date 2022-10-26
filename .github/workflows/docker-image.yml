@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+    - run: docker build -t wizdock77/itmopractice1action github.com/77wiz77/ITMOpractice1.git#main
+    - run: docker tag wizdock77/itmopractice1action wizdock77/itmopractice1action
+    - run: docker push wizdock77/itmopractice1action
