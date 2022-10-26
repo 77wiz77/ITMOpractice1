@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build -t wizdock77/itmopractice1action github.com/77wiz77/ITMOpractice1.git#main
     - name: Run Docker container from Docker image
-      run: docker run -p 3000:3000 wizdock77/itmopractice1action
+      run: docker run -p 4000:4000 wizdock77/itmopractice1action
